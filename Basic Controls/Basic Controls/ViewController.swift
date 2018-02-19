@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var lblOne: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad from point 1")
