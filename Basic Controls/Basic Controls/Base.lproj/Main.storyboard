@@ -39,6 +39,9 @@
                                 <state key="normal" title="Press Me">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnOnePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvH-v4-jtz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,6 +58,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnOne" destination="Y3c-Ni-JQe" id="FLn-My-flD"/>
+                        <outlet property="lblOne" destination="qy9-MC-wOm" id="Idc-UC-YWr"/>
+                        <outlet property="lblTwo" destination="gZE-iq-6vF" id="uod-Rc-mg2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

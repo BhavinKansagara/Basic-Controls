@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet var btnOne: UIButton!
     @IBOutlet var lblTwo: UILabel!
     
+    var incrementor = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad from point 1")
@@ -23,6 +25,16 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         print("viewWillAppear")
     }
+    
+    @IBAction func btnOnePressed(_ sender: Any) {
+        incrementor = incrementor + 1
+        if incrementor % 2 == 0 {
+            self.lblOne.text = "odd here: \(incrementor)"
+        } else {
+            self.lblTwo.text = "even here: \(incrementor)"
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         print("didReceiveMemoryWarning")
