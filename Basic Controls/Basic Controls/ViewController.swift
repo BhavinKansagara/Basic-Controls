@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var lblOne: UILabel!
+    @IBOutlet var btnOne: UIButton!
+    @IBOutlet var lblTwo: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
