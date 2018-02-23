@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var lblOne: UILabel!
     @IBOutlet var btnOne: UIButton!
     @IBOutlet var lblTwo: UILabel!
+    @IBOutlet weak var lblFontSize: UILabel!
     
     var incrementor = 0
     
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
         print("viewWillAppear")
     }
     
+    //MARK:- Button Actions
     @IBAction func btnOnePressed(_ sender: Any) {
         incrementor = incrementor + 1
         if incrementor % 2 != 0 {
@@ -33,6 +35,15 @@ class ViewController: UIViewController {
         } else {
             self.lblTwo.text = "even here: \(incrementor)"
         }
+    }
+    
+    //MARK:- Slider Actions
+    @IBAction func sliderStartsSliding(_ sender: Any) {
+        let slider = sender as! UISlider
+        let value = slider.value
+        self.lblFontSize.text = "\(value)"
+        self.lblOne.font = UIFont.systemFont(ofSize: CGFloat(value))
+        self.lblTwo.font = UIFont.systemFont(ofSize: CGFloat(value))
     }
     
     override func didReceiveMemoryWarning() {
