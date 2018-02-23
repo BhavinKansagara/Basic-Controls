@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     @IBAction func btnOnePressed(_ sender: Any) {
         incrementor = incrementor + 1
-        if incrementor % 2 == 0 {
+        if incrementor % 2 != 0 {
             self.lblOne.text = "odd here: \(incrementor)"
         } else {
             self.lblTwo.text = "even here: \(incrementor)"
