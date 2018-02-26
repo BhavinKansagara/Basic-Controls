@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var btnOne: UIButton!
     @IBOutlet var lblTwo: UILabel!
     @IBOutlet weak var lblFontSize: UILabel!
+    @IBOutlet weak var sliderFontSize: UISlider!
     
     var incrementor = 0
     
@@ -45,6 +46,13 @@ class ViewController: UIViewController {
         self.lblOne.font = UIFont.systemFont(ofSize: CGFloat(value))
         self.lblTwo.font = UIFont.systemFont(ofSize: CGFloat(value))
     }
+    
+    //MARK: - Switch Actions
+    @IBAction func switchValueChanged(_ sender: Any) {
+        let switchUI = sender as! UISwitch
+        self.sliderFontSize.isUserInteractionEnabled = switchUI.isOn
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
