@@ -91,6 +91,20 @@
                                 <color key="textColor" red="0.076171875" green="0.63614908854166663" blue="0.31486002604166669" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3jK-jE-7dW">
+                                <rect key="frame" x="127" y="369" width="121" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="e4A-uv-5h0"/>
+                                    <constraint firstAttribute="height" constant="27" id="uhq-V4-0si"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="One"/>
+                                    <segment title="Two"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GCh-Bf-K8t"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -108,6 +122,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="stK-Ci-HPJ" secondAttribute="trailing" constant="20" id="Wlf-0v-hHD"/>
                             <constraint firstItem="QW9-hj-Ktx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Y3j-tm-hrP"/>
                             <constraint firstItem="vFo-VY-dLe" firstAttribute="leading" secondItem="gj5-TU-wcL" secondAttribute="trailing" constant="20" id="Zgj-k4-X5u"/>
+                            <constraint firstItem="3jK-jE-7dW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f35-9J-AYu"/>
                             <constraint firstItem="gj5-TU-wcL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f39-su-zQX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y3c-Ni-JQe" secondAttribute="trailing" constant="20" id="huw-AF-v88"/>
                             <constraint firstItem="vFo-VY-dLe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iMf-cU-NDz"/>
@@ -115,6 +130,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vFo-VY-dLe" secondAttribute="trailing" constant="20" id="kOD-CP-6XW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gZE-iq-6vF" secondAttribute="trailing" constant="20" id="nhW-Yv-ezy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oFK-ee-Njo" secondAttribute="trailing" id="oEK-ej-Qt8"/>
+                            <constraint firstItem="3jK-jE-7dW" firstAttribute="top" secondItem="vFo-VY-dLe" secondAttribute="bottom" constant="25" id="rf4-6E-jwB"/>
                             <constraint firstItem="stK-Ci-HPJ" firstAttribute="leading" secondItem="yFF-dz-u3Q" secondAttribute="trailing" constant="8" id="soT-aX-hYa"/>
                             <constraint firstItem="yFF-dz-u3Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tc5-cc-7BV"/>
                             <constraint firstItem="qy9-MC-wOm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tcm-GT-37E"/>
@@ -132,6 +148,7 @@
                         <outlet property="lblFontSize" destination="stK-Ci-HPJ" id="tNz-Ea-H4c"/>
                         <outlet property="lblOne" destination="qy9-MC-wOm" id="Idc-UC-YWr"/>
                         <outlet property="lblTwo" destination="gZE-iq-6vF" id="uod-Rc-mg2"/>
+                        <outlet property="segmentControl" destination="3jK-jE-7dW" id="ftX-n7-rBv"/>
                         <outlet property="sliderFontSize" destination="TuT-rF-Zwi" id="KiL-5k-mQ6"/>
                     </connections>
                 </viewController>

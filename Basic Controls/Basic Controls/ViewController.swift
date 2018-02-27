@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var lblTwo: UILabel!
     @IBOutlet weak var lblFontSize: UILabel!
     @IBOutlet weak var sliderFontSize: UISlider!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     var incrementor = 0
     
@@ -51,6 +52,19 @@ class ViewController: UIViewController {
     @IBAction func switchValueChanged(_ sender: Any) {
         let switchUI = sender as! UISwitch
         self.sliderFontSize.isUserInteractionEnabled = switchUI.isOn
+    }
+    
+    //MARK:- Segment Control
+    @IBAction func segmentChanged(_ sender: Any) {
+      let segmentControl = sender as! UISegmentedControl
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            print("One pressed")
+        case 1:
+            print("Two pressed")
+        default:
+            print("default")
+        }
     }
     
     
